@@ -11,6 +11,10 @@
 # production
 /build
 
+/storybook-static
+
+.vscode
+
 # misc
 .DS_Store
 .env.local
