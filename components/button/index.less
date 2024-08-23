@@ -1,0 +1,67 @@
+@import "../styles/var.less";
+@import "../styles/mixins.less";
+
+@prefixCls: choco-button;
+
+.@{prefixCls} {
+  display: inline-block;
+  margin: 0;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  color: @font-color;
+  outline: none;
+  background-color: #fff;
+  padding: @button-default-padding;
+  height: @button-default-height;
+  border-color: @border-color;
+  border-radius: @border-radius;
+
+  &.@{prefixCls}-default {
+    color: @font-color;
+
+    &:hover {
+      color: @primary-color;
+      border-color: @primary-color;
+    }
+  }
+
+  &.@{prefixCls}-primary {
+    .choco-button-hover(@primary-color);
+  }
+
+  &.@{prefixCls}-success {
+    .choco-button-hover(@success-color);
+  }
+
+  &.@{prefixCls}-warning {
+    .choco-button-hover(@warning-color);
+  }
+
+  &.@{prefixCls}-error {
+    .choco-button-hover(@error-color);
+  }
+
+  &.@{prefixCls}-info {
+    .choco-button-hover(@info-color);
+  }
+
+  &.@{prefixCls}-disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: @button-disabled-opacity;
+    color: @disabled-font-color;
+  }
+
+  &.@{prefixCls}-size-large {
+    height: @button-large-height;
+    font-size: @button-large-font-size;
+    padding: @button-large-padding;
+  }
+
+  &.@{prefixCls}-size-small {
+    height: @button-small-height;
+    font-size: @button-small-font-size;
+    padding: @button-small-padding;
+  }
+}

@@ -8,35 +8,65 @@ export default {
     layout: "centered",
   },
   tags: ["autodocs"],
-  argTypes: {
-    backgroundColor: { control: "color" },
-  },
   args: { onClick: fn() },
 };
 
 export const Primary = {
   args: {
-    primary: true,
-    label: "Button",
+    children: "Button",
+    size: "large",
+    type: "primary",
+    disabled: true,
+  },
+};
+export const Success = {
+  args: {
+    children: "Button",
+    size: "default",
+    type: "success",
+  },
+};
+export const Warning = {
+  args: {
+    children: "Button",
+    size: "default",
+    type: "warning",
   },
 };
 
-export const Secondary = {
+export const Error = {
   args: {
-    label: "Button",
+    children: "Button",
+    size: "default",
+    type: "error",
+  },
+};
+
+export const Info = {
+  args: {
+    children: "Button",
+    size: "default",
+    type: "info",
   },
 };
 
 export const Large = {
   args: {
     size: "large",
-    label: "Button",
+    children: "Button",
   },
 };
 
 export const Small = {
   args: {
     size: "small",
-    label: "Button",
+    children: "Button",
+  },
+};
+
+export const Disabled = {
+  args: {
+    children: "Button",
+    disabled: true,
   },
 };

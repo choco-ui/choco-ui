@@ -1,50 +1,60 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import './index.css';
+import React from "react";
+import PropTypes from "prop-types";
+import cls from "classnames";
+import "./index.less";
 
-/**
- * Primary UI component for user interaction
- */
-export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+const SIZES = {
+  small: "small",
+  default: "default",
+  large: "large",
+};
+
+const TYPES = {
+  primary: "primary",
+  default: "default",
+  warning: "warning",
+  success: "success",
+  error: "error",
+  info: "info",
+};
+
+export const Button = ({
+  className,
+  type,
+  primary,
+  backgroundColor,
+  size,
+  label,
+  children,
+  disabled,
+  ...props
+}) => {
+  const prefixCls = "choco-button";
+  const baseProps = {
+    ...props,
+    className: cls(prefixCls, className, {
+      [`${prefixCls}-${type}`]: type,
+      [`${prefixCls}-size-${size}`]: size,
+      [`${prefixCls}-disabled`]: disabled,
+    }),
+  };
+
   return (
-    <button
-      type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={backgroundColor && { backgroundColor }}
-      {...props}
-    >
-      {label}
+    <button type="button" {...props} {...baseProps}>
+      {children}
     </button>
   );
 };
 
 Button.propTypes = {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary: PropTypes.bool,
-  /**
-   * What background color to use
-   */
-  backgroundColor: PropTypes.string,
-  /**
-   * How large should the button be?
-   */
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
-  /**
-   * Button contents
-   */
-  label: PropTypes.string.isRequired,
-  /**
-   * Optional click handler
-   */
+  size: PropTypes.oneOf(Object.values(SIZES)),
+  type: PropTypes.oneOf(Object.values(TYPES)),
   onClick: PropTypes.func,
 };
 
 Button.defaultProps = {
-  backgroundColor: null,
-  primary: false,
-  size: 'medium',
+  size: SIZES.default,
+  type: TYPES.default,
   onClick: undefined,
+  disabled: false,
 };

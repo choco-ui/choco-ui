@@ -1,0 +1,12 @@
+.choco-button-hover(@color: @default-color, @lighten: 5%, @font-color: #fff) {
+  color: @font-color;
+  background-color: @color;
+  border-color: @color;
+
+  &:not(.choco-button-disabled) {
+    &:hover {
+      background-color: lighten(@color, @lighten);
+      color: lighten(@font-color, @lighten);
+    }
+  }
+}
