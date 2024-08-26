@@ -15,10 +15,9 @@ const config = {
     name: "@storybook/react-vite",
     options: {},
   },
-  async viteFinal(config, { configType }) {
+  viteFinal(config) {
     config.plugins = [
       ...config.plugins,
-      require("@vitejs/plugin-react").default(),
     ];
     return config;
   },

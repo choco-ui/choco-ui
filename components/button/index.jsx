@@ -18,6 +18,8 @@ const TYPES = {
   info: "info",
 };
 
+const prefixCls = "choco-button";
+
 export const Button = ({
   className,
   type,
@@ -29,7 +31,6 @@ export const Button = ({
   disabled,
   ...props
 }) => {
-  const prefixCls = "choco-button";
   const baseProps = {
     ...props,
     className: cls(prefixCls, className, {

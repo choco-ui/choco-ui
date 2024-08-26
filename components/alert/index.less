@@ -1,0 +1,47 @@
+@import "../styles/var.less";
+@import "../styles/mixins.less";
+
+@prefixCls: choco-alert;
+
+.@{prefixCls} {
+  border: 1px solid @border-color;
+  font-size: @font-size;
+  padding: @alert-padding;
+  border-radius: @border-radius;
+
+  &-icon {
+    margin: @alert-icon-margin;
+    svg {
+      vertical-align: middle;
+      margin-bottom: 3px;
+    }
+  }
+
+  &-success {
+    .alert-style(@success-color);
+    .@{prefixCls}-icon {
+      color: @success-color;
+    }
+  }
+
+  &-info {
+    .alert-style(@info-color);
+    .@{prefixCls}-icon {
+      color: @info-color;
+    }
+  }
+
+  &-error {
+    .alert-style(@error-color);
+    .@{prefixCls}-icon {
+      color: @error-color;
+    }
+  }
+
+  &-warning {
+    .alert-style(@warning-color);
+    .@{prefixCls}-icon {
+      color: @warning-color;
+    }
+  }
+}

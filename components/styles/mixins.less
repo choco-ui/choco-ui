@@ -10,3 +10,8 @@
     }
   }
 }
+
+.alert-style(@color: @default-color, @opacity: 10%) {
+  border-color: @color;
+  background-color: fade(@color, @opacity);
+}

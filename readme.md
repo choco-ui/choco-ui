@@ -21,7 +21,7 @@ import "@qiqzhao/choco-ui/dist/style.css";
 ## Components
 
 - [x] Button
-- [ ] Alert (ing~)
+- [x] Alert
+- [ ] Avatar (ing~)
 - [ ] Badeg
 - [ ] Card
-- [ ] Avatar
