@@ -1,9 +1,14 @@
 {
   "name": "@qiqzhao/choco-ui",
-  "version": "1.0.0",
-  "module": "src/index.js",
+  "version": "1.0.1",
+  "main": "./dist/choco-ui-library.umd.js",
+  "module": "./dist/choco-ui-library.es.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vite build",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
@@ -29,6 +34,7 @@
     "storybook": "^8.2.9"
   },
   "dependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
     "classnames": "^2.5.1",
     "less": "^4.2.0"
   }

@@ -8,9 +8,19 @@ const config = {
     "@chromatic-com/storybook",
     "@storybook/addon-interactions",
   ],
+  core: {
+    builder: "@storybook/builder-vite",
+  },
   framework: {
     name: "@storybook/react-vite",
     options: {},
+  },
+  async viteFinal(config, { configType }) {
+    config.plugins = [
+      ...config.plugins,
+      require("@vitejs/plugin-react").default(),
+    ];
+    return config;
   },
 };
 export default config;
