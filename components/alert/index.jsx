@@ -26,7 +26,13 @@ const TYPE = {
   },
 };
 
-export const Alert = ({ children, type, className, showIcon, message }) => {
+export const Alert = ({
+  children,
+  className,
+  message,
+  type = "success",
+  showIcon = false,
+}) => {
   const containerCls = cls(prefixCls, className, {
     [`${prefixCls}-${type}`]: type,
   });
@@ -46,9 +52,4 @@ export const Alert = ({ children, type, className, showIcon, message }) => {
 
 Alert.propTypes = {
   type: PropTypes.oneOf(Object.keys(TYPE)),
-};
-
-Alert.defaultProps = {
-  type: TYPE.info,
-  showIcon: false,
 };

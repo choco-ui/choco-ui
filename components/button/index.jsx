@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import cls from "classnames";
+
 import "./index.less";
 
 const SIZES = {
@@ -22,13 +23,13 @@ const prefixCls = "choco-button";
 
 export const Button = ({
   className,
-  type,
   primary,
   backgroundColor,
-  size,
   label,
   children,
-  disabled,
+  size = SIZES.default,
+  type = TYPES.default,
+  disabled = false,
   ...props
 }) => {
   const baseProps = {
@@ -51,11 +52,4 @@ Button.propTypes = {
   size: PropTypes.oneOf(Object.values(SIZES)),
   type: PropTypes.oneOf(Object.values(TYPES)),
   onClick: PropTypes.func,
-};
-
-Button.defaultProps = {
-  size: SIZES.default,
-  type: TYPES.default,
-  onClick: undefined,
-  disabled: false,
 };

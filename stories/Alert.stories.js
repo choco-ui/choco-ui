@@ -7,14 +7,15 @@ export default {
     layout: "centered",
   },
   tags: ["autodocs"],
-  args: {},
+  args: { showIcon: false, type: "success" },
 };
 
 export const Success = {
   args: {
     children: "Alert",
     type: "success",
-    message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, laudantium provident maxime aliquid ratione, neque nostrum rerum obcaecati placeat possimus molestias soluta assumenda sint, natus nam suscipit incidunt. Molestiae, nisi?'
+    message:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, laudantium provident maxime aliquid ratione, neque nostrum rerum obcaecati placeat possimus molestias soluta assumenda sint, natus nam suscipit incidunt. Molestiae, nisi?",
   },
 };
 export const Warning = {
@@ -66,6 +67,5 @@ export const InfoWithIcon = {
     children: "Alert",
     type: "info",
     showIcon: true,
-
   },
 };
