@@ -1,0 +1,31 @@
+@import "../styles/var.less";
+@import "../styles/mixins.less";
+
+@prefixCls: choco-avatar;
+
+.@{prefixCls} {
+  display: inline-block;
+  text-align: center;
+  background-color: @choco-avatar-bg;
+  color: @choco-avatar-color;
+  white-space: nowrap;
+  overflow: hidden;
+  vertical-align: middle;
+  .avatar-size(@choco-avatar-size-base, @choco-avatar-size-base);
+
+  &-size-large {
+    .avatar-size(@choco-avatar-size-lg,@choco-avatar-font-size-lg);
+  }
+
+  &-size-small {
+    .avatar-size(@choco-avatar-size-sm,@choco-avatar-font-size-sm);
+  }
+
+  &-circle {
+    border-radius: 50%;
+  }
+
+  &-square {
+    border-radius: @choco-avatar-border-radius;
+  }
+}

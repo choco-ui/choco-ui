@@ -22,6 +22,7 @@ import "@qiqzhao/choco-ui/dist/style.css";
 
 - [x] Button
 - [x] Alert
-- [ ] Avatar (ing~)
+- [x] Avatar
+- [ ] Pagination (ing~)
 - [ ] Badeg
 - [ ] Card
