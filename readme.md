@@ -23,6 +23,6 @@ import "@qiqzhao/choco-ui/dist/style.css";
 - [x] Button
 - [x] Alert
 - [x] Avatar
-- [ ] Pagination (ing~)
-- [ ] Badeg
+- [x] Pagination
+- [ ] Badge
 - [ ] Card
