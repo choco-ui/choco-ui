@@ -24,5 +24,6 @@ import "@qiqzhao/choco-ui/dist/style.css";
 - [x] Alert
 - [x] Avatar
 - [x] Pagination
+- [x] Empty
 - [ ] Badge
 - [ ] Card

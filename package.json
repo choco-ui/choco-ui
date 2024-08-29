@@ -12,7 +12,11 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "ui-lib",
+    "choco-ui"
+  ],
   "author": "",
   "license": "ISC",
   "description": "",
