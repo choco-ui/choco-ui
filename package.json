@@ -1,6 +1,6 @@
 {
   "name": "@qiqzhao/choco-ui",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "./dist/choco-ui-library.umd.js",
   "module": "./dist/choco-ui-library.es.js",
   "files": [
